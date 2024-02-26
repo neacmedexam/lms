@@ -47,7 +47,7 @@
                         <h1 class="text-md uppercase text-2xl text-center py-4 text-darkMode tracking-wide font-bold">Sign in to your account.</h1>
                     </div>
                     <div class="">
-                        <p class="text-lg text-darkMode ">email</p>
+                        <p class="text-lg text-darkMode ">emailwasdf</p>
                         <input type="email" name="email" value="{{old('email')}}" id="email" placeholder="email" class="border py-2 px-4 border-gray-300 w-full outline-none">
                     </div>
                     @error('email')
