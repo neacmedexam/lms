@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'Poppins', sans-serif;
+
+}
+::-webkit-file-upload-button {
+   
+    background: none !important;
+    color: rgb(36, 36, 36) !important;
+
+  }
+
+.lcdashboard{
+    color:black !important;
+}
+.lcdashboard:focus{
+    color:#2563eb !important;
+}
+.lcdashboard:visited{
+    color:#2563eb !important;
+}
+.lcdashboard:active{
+    color:#2563eb !important;
+}

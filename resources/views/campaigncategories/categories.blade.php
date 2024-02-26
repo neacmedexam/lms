@@ -1,0 +1,58 @@
+
+@props(['addemployees'])
+
+<x-layouts>
+    <div class="bg-bgMain w-full p-14 flex flex-col items-center m-auto  h-full lg:h-screen text-sm ">
+        <?php if(auth()->user()->userType == 1 || auth()->user()->userType == 3 || auth()->user()->userType == 4):?>
+
+                <h1 class=" text-4xl">View Report</h1>
+                <h1 class="font-bold">Category</h1>
+           
+                {{-- <div class="lg:max-w-[50%] w-full   justify-evenly p-4 bg-[#ffffff91] shadow-lg shadow-gray-600 flex flex-col items-center h-full ">
+                    <div class="border w-full h-full p-2 m-2 text-center flex items-center justify-center hover:shadow-lg duration-300 transition-all">
+                        <a href="/viewreport/fbanalytics" class="h-full w-full flex items-center justify-center ">FB Analytics</a> 
+                    </div>
+                    <div class="border w-full h-full p-2 m-2 text-center flex items-center justify-center hover:shadow-lg duration-300 transition-all">
+                        <a href="/viewreport/webacquisition" class="h-full w-full flex items-center justify-center">Web Acquisition</a> 
+                    </div>
+                    <div class="border w-full h-full p-2 m-2 text-center flex items-center justify-center hover:shadow-lg duration-300 transition-all">
+                        <a href="/viewreport/campaigndashboard" class="h-full w-full flex items-center justify-center">Campaign</a> 
+                    </div>
+                </div> --}}
+
+                <div class=" w-full justify-evenly  px-10 py-4 m-auto h-full flex flex-col sm:flex-row items-center ">
+                    {{-- <div class="bg-gradient-to-r from-purple-400 to-blue-600 hover:scale-[102%] w-full h-full p-[2px] m-2 text-center flex items-center justify-center  hover:shadow-lg duration-300 transition-all"> --}}
+                    <div class=" p-4 m-2">
+                        <a href="/viewreport/fbanalytics" class="h-full w-full flex items-center justify-center hover:scale-[105%] duration-300 transition-all">
+                            {{-- <h1 class="font-extrabold text-transparent text-xl bg-clip-text bg-gradient-to-r from-purple-400 to-blue-600">
+                            FB Analytics
+                            </h1> --}}
+                            <img src="{{asset('public/storage/categories/FBA.png')}}" alt="" class="h-[70%] w-[70%]">
+                        </a> 
+                    </div>
+                    {{-- <div class="bg-gradient-to-r from-orange-400 to-orange-600 hover:scale-[102%] w-full h-full p-[2px] m-2 text-center flex items-center justify-center hover:shadow-lg duration-300 transition-all"> --}}
+                    <div class=" p-4 m-2">
+                        <a href="/viewreport/webacquisition" class="h-full w-full flex items-center justify-center hover:scale-[105%] duration-300 transition-all ">
+                            {{-- <h1 class="font-extrabold text-transparent text-xl bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
+                                Web Acquisition
+                            </h1> --}}
+                            <img src="{{asset('public/storage/categories/WEB.png')}}" alt="" class="h-[70%] w-[70%]">
+                        </a> 
+                    </div>
+                    {{-- <div class="bg-gradient-to-r from-red-400 to-violet-600  hover:scale-[102%]  w-full h-full p-[2px] m-2 text-center flex items-center justify-center hover:shadow-lg duration-300 transition-all"> --}}
+                    <div class=" p-4 m-2">
+                        <a href="/viewreport/campaigndashboard" class="h-full w-full flex items-center justify-center hover:scale-[105%] duration-300 transition-all ">
+                            {{-- <h1 class="font-extrabold text-transparent text-xl bg-clip-text bg-gradient-to-r from-red-400 to-violet-600">
+                                Facebook Ads
+                            </h1> --}}
+                            <img src="{{asset('public/storage/categories/FB_ADS.png')}}" alt="" class="h-[70%] w-[70%]">
+                        </a> 
+                    </div>
+                </div>
+        
+
+        <?php else: ?>
+            <p>you don't have access in this page.</p>
+        <?php endif; ?>
+    </div>
+</x-layouts>
